@@ -6,6 +6,15 @@
   <title>J's Sanctuary for 2</title>
   <link rel="stylesheet" href="style.css" />
 <style>
+  .hero {
+    animation: fadeInHero 1.5s ease-out;
+  }
+
+  @keyframes fadeInHero {
+    from { opacity: 0; transform: scale(1.05); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
   .faq {
     padding: 3rem 1rem;
     background-color: #f9f9f9;
@@ -50,6 +59,17 @@
     margin-top: 0.5rem;
     font-size: 0.95rem;
     line-height: 1.5;
+  }
+  details {
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+  }
+  details[open] {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 </style>
 </head>
@@ -108,7 +128,7 @@
     <a class="cta-button dark" href="https://lin.ee/IiAZYyG">LINEで予約する</a>
   </section>
 
-  <section class="faq">
+  
   <h2>よくある質問</h2>
 
   <div class="faq-category">🧳 ご利用について</div>
@@ -132,7 +152,8 @@
   <details><summary>保険や補償はどうなっていますか？</summary><p>レンタカー保険に加入済み。万一の際の補償も含めてご安心いただける体制です。（規定あり）</p></details>
 </section>
 
- <footer>
-    <p>&copy; 2025 J's Sanctuary for 2</p>
+<footer>
+  <p>&copy; 2025 J's Sanctuary for 2</p>
+</footer>
 </body>
 </html>
