@@ -71,12 +71,24 @@
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
   }
+  .hero-title {
+    display: inline-block;
+    text-align: center;
+  }
+  .mobile-br {
+    display: none;
+  }
+  @media screen and (max-width: 600px) {
+    .mobile-br {
+      display: inline;
+    }
+  }
 </style>
 </head>
 <body>
   <header class="hero">
     <div class="hero-overlay">
-      <h1 style="white-space: nowrap;">2人だけの“ととのいの旅”</h1>
+      <h1 class="hero-title">2人だけの<br class="mobile-br">“ととのいの旅”</h1>
       <p>毎月10組限定“旅するホテル”</p>
       <a class="cta-button" href="#reserve">LINEで予約する</a>
     </div>
