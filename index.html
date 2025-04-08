@@ -133,6 +133,12 @@
   section, h1, h2, h3, p, ul, ol, li {
     text-align: center;
   }
+  .pc-only { display: inline; }
+  .mobile-only { display: none; }
+  @media screen and (max-width: 768px) {
+    .pc-only { display: none; }
+    .mobile-only { display: inline; }
+  }
 </style>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
@@ -161,7 +167,7 @@
     <img src="js-logo.png" alt="J'sロゴ" class="logo" />
     <h2>SAUNA JOURNEYとは</h2>
     <p>
-      サウナも、移動も、宿泊も。<br class="mobile-br">この1台で全部ととのう。<br class="mobile-br">2人だけの特別なサウナ旅を提供する、<br class="mobile-br">移動式の“ととのう空間”です。
+      <span class="pc-only">サウナも、移動も、宿泊も。この1台で全部ととのう。<br>2人だけの特別なサウナ旅を提供する、移動式の“ととのう空間”です。</span><span class="mobile-only">サウナも、移動も、宿泊も。<br>この1台で全部ととのう。<br>2人だけの特別なサウナ旅を提供する、<br>移動式の“ととのう空間”です。</span>
     </p>
   </section>
 
