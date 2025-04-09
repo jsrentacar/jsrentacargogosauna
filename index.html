@@ -149,6 +149,26 @@ $1
   .hero-title span.pc-only {
     display: inline;
   }
+  .hero-title span.mobile-only {
+    display: none;
+  }
+  .hero-title span.pc-only {
+    display: inline;
+  }
+  @media screen and (max-width: 768px) {
+    .hero-title span.mobile-only {
+      display: inline;
+      font-size: 1.4rem;
+    }
+    .hero-title span.pc-only {
+      display: none;
+    }
+    .sauna-journey-title {
+      display: block;
+      font-size: 1.2rem;
+      word-break: break-word;
+    }
+  }
 </style>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
@@ -168,7 +188,7 @@ $1
   <header class="hero" style="background: url('hero-main.jpg') no-repeat center center / cover; height: 100vh; color: white; position: relative; overflow: hidden; width: 100vw;">
     <div class="hero-overlay" style="background: rgba(0,0,0,0.4); position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 2rem; box-sizing: border-box;">
       <h1 class="hero-title">
-  <span class="mobile-only">2人だけの<br>“ととのいの旅”<br>「SAUNA JOURNEY」</span>
+  <span class="mobile-only">2人だけの<br>“ととのいの旅”<br><span class="sauna-journey-title">「SAUNA JOURNEY」</span></span>
   <span class="pc-only">2人だけの“ととのいの旅”<br>「SAUNA JOURNEY」</span>
 </h1>
 <p class="hero-subtitle">毎月10組限定<br>“旅するホテル”</p>
